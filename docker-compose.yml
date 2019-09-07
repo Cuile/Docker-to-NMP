@@ -47,7 +47,7 @@ services:
       # MYSQL_USER: SuiteCRM
       # MYSQL_PASSWORD: SuiteCRM456
     restart: always
-    command: "--character-set-server=utf8"
+    command: --character-set-server=utf8
     networks:
       - default
 networks:
