@@ -37,9 +37,10 @@ services:
     container_name: mysql
     ports:
       - "3306:3306"
+      - "33060:33060"
     volumes:
       # - ./conf.d/mysql/conf.d:/etc/mysql/conf.d:ro
-      - ./data/mysql:/var/lib/mysql/:rw
+      - ./data/mysql/:/var/lib/mysql/:rw
       - ./log/mysql/:/var/log/mysql/:rw
     environment:
       MYSQL_ROOT_PASSWORD: 6677446633
