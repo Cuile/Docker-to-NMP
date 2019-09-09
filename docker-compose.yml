@@ -39,7 +39,7 @@ services:
       - "3306:3306"
       - "33060:33060"
     volumes:
-      - ./Docker/MySQL/conf.d/docker.cnf:/etc/mysql/conf.d/docker.cnf:ro
+      # - ./Docker/MySQL/conf.d/docker.cnf:/etc/mysql/conf.d/docker.cnf:ro
       - ./data/mysql/:/var/lib/mysql/:rw
       - ./log/mysql/:/var/log/mysql/:rw
     environment:
