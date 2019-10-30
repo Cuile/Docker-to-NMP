@@ -1,2 +1,3 @@
 # NMP
-Nginx+MySQL+PHP
+
+此文件夹存放各服务日志
