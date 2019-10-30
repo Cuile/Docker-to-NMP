@@ -8,5 +8,10 @@
 
 ## 2、启动
 ```bash
-$ docker-compose -f ./docker-compose.yml up -d
+$ bash up.sh
+```
+
+## 3、关闭
+```bash
+$ bash down.sh
 ```
