@@ -27,7 +27,7 @@ RUN apt-get install -y libicu-dev --no-install-recommends \
 
 ## General
 RUN docker-php-ext-install opcache \
-    && docker-php-ext-install pdo pdo_mysql pdo_pgsql pdo_sqlite \
+    && docker-php-ext-install pdo pdo_mysql \
     && docker-php-ext-install mbstring
 
 RUN rm -rf /var/lib/apt/lists/*
