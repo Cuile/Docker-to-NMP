@@ -33,7 +33,7 @@ RUN docker-php-ext-install opcache \
 RUN rm -rf /var/lib/apt/lists/*
 
 # Composer
-ENV COMPOSER_HOME=/root/composer
-RUN curl -sS https://getcomposer.org/installer | php --no-ansi --install-dir=/usr/local/bin --filename=composer \
-    && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
-ENV PATH $COMPOSER_HOME/vendor/bin:$PATH
+# ENV COMPOSER_HOME=/root/composer
+# RUN curl -sS https://getcomposer.org/installer | php --no-ansi --install-dir=/usr/local/bin --filename=composer \
+#     && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+# ENV PATH $COMPOSER_HOME/vendor/bin:$PATH
