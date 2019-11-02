@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   nginx:
-    build: ./docker/nginx/
+    image: cuile/nginx:1.0
     container_name: nginx
     ports:
       - "80:80"
@@ -18,7 +18,7 @@ services:
     networks:
       - default
   php:
-    build: ./docker/php/
+    image: cuile/php-fpm:1.1
     container_name : php
     expose:
       - "9000"
@@ -33,7 +33,7 @@ services:
     networks:
       - default
   mysql:
-    build: ./docker/mysql/
+    image: cuile/mysql:1.0
     container_name: mysql
     ports:
       - "3306:3306"
