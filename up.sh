@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose -f ./config.yml up -d
+docker-compose -f ./docker/nmp-nmp.yml up -d --build

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose -f ./config.yml down
+docker-compose -f ./docker/nmp-nmp.yml down
