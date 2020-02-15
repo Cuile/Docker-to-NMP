@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  nginx:
+    extends:
+      file: nginx.yml
+      service: nginx
+    links:
+      - php:php
+    networks:
+      - default
+  php:
+    extends:
+      file: php-fpm.yml
+      service: php
+    networks:
+      - default
+networks:
+  default:
+  

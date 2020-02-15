@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  php:
+    build:
+      context: .
+      dockerfile: php-fpm.Dockerfile
+    image: nmp-php-fpm
+    container_name : nmp-php-fpm
+    expose:
+      - "9000"
+    volumes:
+      # - ./conf/php/conf.d/php.ini-development:/usr/local/etc/php/php.ini:ro
+      - ../app/:/var/www/html/:rw
+      - ../log/php/:/var/log/php-fpm/:rw
+    restart: always
+    command: php-fpm

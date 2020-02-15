@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: mysql.Dockerfile
+    image: nmp-mysql
+    container_name: nmp-mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../conf/mysql/conf.d/docker.cnf:/etc/mysql/conf.d/docker.cnf:ro
+      - ../data/mysql/:/var/lib/mysql/:rw
+      - ../log/mysql/:/var/log/mysql/:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: 6677446633
+      # MYSQL_DATABASE: tmp
+      # MYSQL_USER: tmp
+      # MYSQL_PASSWORD: tmp
+    restart: always
+    command: --character-set-server=utf8
