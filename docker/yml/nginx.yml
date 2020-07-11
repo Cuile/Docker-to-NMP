@@ -3,7 +3,7 @@ services:
   nginx:
     build:
       context: .
-      dockerfile: nginx.Dockerfile
+      dockerfile: ../Dockerfile/nginx.Dockerfile
     image: nmp-nginx
     container_name: nmp-nginx
     ports:
