@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose -f ../yml/nginx.yml up -d --build
+docker-compose -f ../yml/nginx.yml up --build
