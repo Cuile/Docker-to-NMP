@@ -16,5 +16,3 @@ services:
       - ../../log/nginx/:/var/log/nginx/:rw
     restart: always
     command: nginx -g 'daemon off;'
-
-  
