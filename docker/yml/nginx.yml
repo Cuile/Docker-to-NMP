@@ -7,15 +7,19 @@ services:
     image: nmp-nginx
     container_name: nmp-nginx
     ports:
+      # http使用
       - "80:80"
+      # 邮件反向代理使用
       - "25:25"
+      - "110:110"
     volumes:
       - ../../conf/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ../../log/nginx/:/var/log/nginx/:rw
+      # http使用
       - ../../conf/nginx/http.conf:/etc/nginx/http.conf:ro
-      # 邮件反向代理使用
-      - ../../conf/nginx/r_proxy.conf:/etc/nginx/r_proxy.conf:ro
       - ../../conf/nginx/conf.d/:/etc/nginx/conf.d/:ro
       - ../../app/:/var/www/html/:rw
-      - ../../log/nginx/:/var/log/nginx/:rw
+      # 邮件反向代理使用
+      - ../../conf/nginx/r_proxy.conf:/etc/nginx/r_proxy.conf:ro
     restart: always
     command: nginx -g 'daemon off;'
