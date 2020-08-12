@@ -24,7 +24,8 @@ services:
     restart: always
     command: nginx -g 'daemon off;'
     networks:
-      bridge:
+      ss_v2ray:
         aliases:
           - nginx
-
+networks:
+  ss_v2ray:
