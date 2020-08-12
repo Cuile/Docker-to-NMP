@@ -27,5 +27,3 @@ services:
       ss_v2ray:
         aliases:
           - nginx
-networks:
-  ss_v2ray:
