@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3.8'
 services:
   nginx:
     build:
@@ -23,8 +23,7 @@ services:
       - ../../conf/nginx/r_proxy.conf:/etc/nginx/r_proxy.conf:ro
     restart: always
     command: nginx -g 'daemon off;'
-networks:
-  default:
-    aliases:
-      - nginx
-      
+    networks:
+      default:
+        aliases:
+          - nginx
