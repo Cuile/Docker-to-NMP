@@ -27,3 +27,5 @@ services:
       default:
         aliases:
           - nginx
+networks:
+  default:
